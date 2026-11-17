@@ -1,0 +1,33 @@
+TASK 1
+Slope: -0.7262
+Intercept: 45.85
+Predicted price at 500 m: 42.22
+Explanation: Har additional 100 m par predicted price takreeban
+0.73 units (about 7,300 NTD per ping) kam hoti hai. Negative slope
+ka matlab hai metro station se door ghar sasty hain.
+
+TASK 2
+Linear fold RMSEs: (Colab output se)   Mean: (apna number)
+Quadratic fold RMSEs: (Colab output se)   Mean: (apna number)
+Better model: Quadratic
+Explanation: Quadratic ka error kam hai kyunke resistance speed
+(Froude number) ke saath seedhi line mein nahi badhti. Row-based
+split mein ek hi hull ke experiments alag folds mein aa sakte hain,
+isliye CV estimate thora optimistic ho sakta hai.
+
+TASK 3
+Baseline mean CV RMSE: (apna number)
+Tuned mean CV RMSE: (apna number)
+Best parameters: (apne)
+Test RMSE: (apna)   Test MAE: (apna)
+
+Comparison: Tuning se error kaafi kam hua kyunke concrete ki
+strength ingredients aur age par seedhi line mein depend nahi karti.
+
+Interaction term: cement x age (cement ka asar is par depend karta
+hai ke concrete kitne din cure hua).
+
+Scaling pipeline ke andar kyun: Ridge coefficients ki size par
+penalty lagata hai, to features ka scale barabar hona chahiye.
+Pipeline ke andar scaler har fold ke training data par hi fit hota
+hai, is se validation data ki information leak nahi hoti.
